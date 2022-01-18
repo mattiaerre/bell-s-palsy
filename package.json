@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "gh-pages": "^3.2.3",
     "moment": "^2.29.1",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
@@ -18,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier:fix": "prettier './{src,tools}/**/*.{css,js,json}' --write"
+    "prettier:fix": "prettier './{src,tools}/**/*.{css,js,json}' --write",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +41,6 @@
       "last 1 safari version"
     ]
   },
-  "description": "Bell's palsy - Mattia's journey"
+  "description": "Bell's palsy - Mattia's journey",
+  "homepage": "https://mattiaerre.github.io/bell-s-palsy"
 }
