@@ -53,7 +53,7 @@ function App() {
           </a>
         </li>
       </ul>
-      <footer>bell-s-palsy v0.2.2 - 2022</footer>
+      <footer>bell-s-palsy v0.3.0 - 2022</footer>
     </div>
   );
 }
