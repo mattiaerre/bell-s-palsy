@@ -26,7 +26,7 @@ function App() {
         ))}
       </datalist>
       <p>Last update: {getLastUpdate(paths)}</p>
-      <footer>bell-s-palsy v0.1.0 - 2022</footer>
+      <footer>bell-s-palsy v0.1.2 - 2022</footer>
     </div>
   );
 }
