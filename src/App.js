@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import paths from './files.json';
+import getAgo from './getAgo';
+import getLastUpdate from './getLastUpdate';
 import './App.css';
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1>Bell's palsy - Mattia's journey</h1>
+      <h2>{getAgo(imgSrc)}</h2>
       <img alt="TODO" src={imgSrc} />
       <input
         label={imgSrc.split('/')[1]}
@@ -22,6 +25,7 @@ function App() {
           <option key={paths[index]} value={index}></option>
         ))}
       </datalist>
+      <p>Last update: {getLastUpdate(paths)}</p>
       <footer>bell-s-palsy v0.1.0 - 2022</footer>
     </div>
   );
