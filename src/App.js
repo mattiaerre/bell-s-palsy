@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import paths from './files.json';
+import getAgo from './getAgo';
+import getLastUpdate from './getLastUpdate';
 import './App.css';
 
 function App() {
+  const [imgSrc, setImgSrc] = useState(paths[paths.length - 1]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Bell's palsy - Mattia's journey</h1>
+      <h2>{getAgo(imgSrc)}</h2>
+      <img alt="TODO" src={imgSrc} />
+      <input
+        label={imgSrc.split('/')[1]}
+        list="tickmarks"
+        max={paths.length - 1}
+        min="0"
+        onChange={(e) => setImgSrc(paths[parseInt(e.target.value)])}
+        type="range"
+      />
+      <datalist id="tickmarks">
+        {paths.map((_, index) => (
+          <option key={paths[index]} value={index}></option>
+        ))}
+      </datalist>
+      <p>Last update: {getLastUpdate(paths)}</p>
+      <footer>bell-s-palsy v0.1.0 - 2022</footer>
     </div>
   );
 }
