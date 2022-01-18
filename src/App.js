@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import paths from './files.json';
 import getAgo from './getAgo';
 import getLastUpdate from './getLastUpdate';
@@ -6,6 +6,13 @@ import './App.css';
 
 function App() {
   const [imgSrc, setImgSrc] = useState(paths[paths.length - 1]);
+
+  const inputEl = useRef(null);
+
+  useEffect(() => {
+    const index = parseInt(paths.length - 1, 10);
+    inputEl.current.value = index;
+  }, []);
 
   return (
     <div className="App">
@@ -17,7 +24,11 @@ function App() {
         list="tickmarks"
         max={paths.length - 1}
         min="0"
-        onChange={(e) => setImgSrc(paths[parseInt(e.target.value)])}
+        onChange={(e) => {
+          const index = parseInt(e.target.value, 10);
+          setImgSrc(paths[index]);
+        }}
+        ref={inputEl}
         type="range"
       />
       <datalist id="tickmarks">
@@ -42,7 +53,7 @@ function App() {
           </a>
         </li>
       </ul>
-      <footer>bell-s-palsy v0.2.1 - 2022</footer>
+      <footer>bell-s-palsy v0.2.2 - 2022</footer>
     </div>
   );
 }
