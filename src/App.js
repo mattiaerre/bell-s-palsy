@@ -33,7 +33,7 @@ function App() {
         <li>The picture shows my biggest smile</li>
         <li>You can slide left to go back in time</li>
       </ul>
-      <footer>bell-s-palsy v0.1.2 - 2022</footer>
+      <footer>bell-s-palsy v0.2.0 - 2022</footer>
     </div>
   );
 }
