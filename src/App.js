@@ -32,6 +32,15 @@ function App() {
         <li>I'm taking a pic a day around 2:00 pm EST</li>
         <li>The picture shows my biggest smile</li>
         <li>You can slide left to go back in time</li>
+        <li>
+          <a
+            href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's Palsy Fact Sheet
+          </a>
+        </li>
       </ul>
       <footer>bell-s-palsy v0.2.0 - 2022</footer>
     </div>
