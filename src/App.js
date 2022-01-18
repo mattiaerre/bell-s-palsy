@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
-      <img alt="TODO" src={imgSrc} />
+      <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
       <input
         label={imgSrc.split('/')[1]}
         list="tickmarks"
