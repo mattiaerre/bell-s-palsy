@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
-      <img alt="TODO" src={imgSrc} />
+      <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
       <input
         label={imgSrc.split('/')[1]}
         list="tickmarks"
@@ -26,7 +26,14 @@ function App() {
         ))}
       </datalist>
       <p>Last update: {getLastUpdate(paths)}</p>
-      <footer>bell-s-palsy v0.1.0 - 2022</footer>
+      <h2>Notes</h2>
+      <ul>
+        <li>My journey started Sunday, January 16th, 2022</li>
+        <li>I'm taking a pic a day around 2:00 pm EST</li>
+        <li>The picture shows my biggest smile</li>
+        <li>You can slide left to go back in time</li>
+      </ul>
+      <footer>bell-s-palsy v0.2.0 - 2022</footer>
     </div>
   );
 }
