@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  max-width: 768px;
   margin: auto;
+  max-width: 768px;
   text-align: center;
 }
