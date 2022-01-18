@@ -46,3 +46,8 @@ h2 {
   color: darkgray;
   font-size: 2rem;
 }
+
+ul {
+  list-style: none;
+  text-align: left;
+}

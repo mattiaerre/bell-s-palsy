@@ -42,5 +42,6 @@
     ]
   },
   "description": "Bell's palsy - Mattia's journey",
-  "homepage": "https://mattiaerre.github.io/bell-s-palsy"
+  "homepage": "https://mattiaerre.github.io/bell-s-palsy",
+  "license": "MIT"
 }
