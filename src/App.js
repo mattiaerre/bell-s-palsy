@@ -5,6 +5,7 @@ import getLastUpdate from './getLastUpdate';
 import './App.css';
 
 function App() {
+  const [counter, setCounter] = useState(parseInt(paths.length, 10));
   const [imgSrc, setImgSrc] = useState(paths[paths.length - 1]);
 
   const inputEl = useRef(null);
@@ -19,6 +20,7 @@ function App() {
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
       <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
+      <p>{`${counter}/${paths.length}`}</p>
       <input
         label={imgSrc.split('/')[1]}
         list="tickmarks"
@@ -26,6 +28,7 @@ function App() {
         min="0"
         onChange={(e) => {
           const index = parseInt(e.target.value, 10);
+          setCounter(index + 1);
           setImgSrc(paths[index]);
         }}
         ref={inputEl}
@@ -45,6 +48,15 @@ function App() {
         <li>You can slide left to go back in time</li>
         <li>
           <a
+            href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's palsy
+          </a>
+        </li>
+        <li>
+          <a
             href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
             rel="noreferrer noopener"
             target="_blank"
@@ -53,7 +65,7 @@ function App() {
           </a>
         </li>
       </ul>
-      <footer>bell-s-palsy v0.3.1 - 2022</footer>
+      <footer>bell-s-palsy v0.4.0 - 2022</footer>
     </div>
   );
 }
