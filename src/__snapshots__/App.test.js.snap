@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`scroll 1`] = `
+<input
+  label="2022_01_21.jpg"
+  list="tickmarks"
+  max="5"
+  min="0"
+  type="range"
+/>
+`;
+
+exports[`snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <h1>
+      Bell's palsy - Mattia's journey
+    </h1>
+    <h2>
+      a day ago
+    </h2>
+    <img
+      alt="TODO"
+      src="/images/2022_01_21.jpg"
+    />
+    <p>
+      6/6
+    </p>
+    <input
+      label="2022_01_21.jpg"
+      list="tickmarks"
+      max="5"
+      min="0"
+      type="range"
+    />
+    <datalist
+      id="tickmarks"
+    >
+      <option
+        value="0"
+      />
+      <option
+        value="1"
+      />
+      <option
+        value="2"
+      />
+      <option
+        value="3"
+      />
+      <option
+        value="4"
+      />
+      <option
+        value="5"
+      />
+    </datalist>
+    <p>
+      Last update: Friday, January 21st 2022
+    </p>
+    <h2>
+      Notes
+    </h2>
+    <ul>
+      <li>
+        My journey started Sunday, January 16th, 2022
+      </li>
+      <li>
+        I'm taking a pic a day around 2:00 pm EST
+      </li>
+      <li>
+        The picture shows my biggest smile
+      </li>
+      <li>
+        You can slide left to go back in time
+      </li>
+      <li>
+        <a
+          href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Bell's palsy
+        </a>
+      </li>
+      <li>
+        <a
+          href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
+          rel="noreferrer noopener"
+          target="_blank"
+        >
+          Bell's Palsy Fact Sheet
+        </a>
+      </li>
+    </ul>
+    <footer>
+      bell-s-palsy v0.4.1 - 2022
+    </footer>
+  </div>
+</DocumentFragment>
+`;
