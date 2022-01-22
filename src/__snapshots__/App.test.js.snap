@@ -19,19 +19,19 @@ exports[`snapshot 1`] = `
       Bell's palsy - Mattia's journey
     </h1>
     <h2>
-      a day ago
+      4 hours ago
     </h2>
     <img
       alt="TODO"
-      src="/images/2022_01_21.jpg"
+      src="/images/2022_01_22.jpg"
     />
     <p>
-      6/6
+      7/7
     </p>
     <input
-      label="2022_01_21.jpg"
+      label="2022_01_22.jpg"
       list="tickmarks"
-      max="5"
+      max="6"
       min="0"
       type="range"
     />
@@ -56,9 +56,12 @@ exports[`snapshot 1`] = `
       <option
         value="5"
       />
+      <option
+        value="6"
+      />
     </datalist>
     <p>
-      Last update: Friday, January 21st 2022
+      Last update: Saturday, January 22nd 2022
     </p>
     <h2>
       Notes
@@ -96,7 +99,7 @@ exports[`snapshot 1`] = `
       </li>
     </ul>
     <footer>
-      bell-s-palsy v0.4.1 - 2022
+      bell-s-palsy v0.4.2 - 2022
     </footer>
   </div>
 </DocumentFragment>
