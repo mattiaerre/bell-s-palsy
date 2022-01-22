@@ -1,6 +1,6 @@
 {
   "name": "bell-s-palsy",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -43,5 +43,12 @@
   },
   "description": "Bell's palsy - Mattia's journey",
   "homepage": "https://mattiaerre.github.io/bell-s-palsy",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ]
+  }
 }
