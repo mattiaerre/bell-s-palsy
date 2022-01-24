@@ -1,30 +1,33 @@
 import { useEffect, useRef, useState } from 'react';
-import paths from './files.json';
 import getAgo from './getAgo';
 import getLastUpdate from './getLastUpdate';
 import './App.css';
 
-function App() {
-  const [counter, setCounter] = useState(parseInt(paths.length, 10));
-  const [imgSrc, setImgSrc] = useState(paths[paths.length - 1]);
+function App({ paths, version }) {
+  const pathsLength = paths.length;
+  const lastIndex = pathsLength - 1;
+  const lastPath = paths[lastIndex];
+
+  const [counter, setCounter] = useState(parseInt(pathsLength, 10));
+  const [imgSrc, setImgSrc] = useState(lastPath);
 
   const inputEl = useRef(null);
 
   useEffect(() => {
-    const index = parseInt(paths.length - 1, 10);
+    const index = parseInt(lastIndex, 10);
     inputEl.current.value = index;
-  }, []);
+  }, [lastIndex]);
 
   return (
     <div className="App">
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
       <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
-      <p>{`${counter}/${paths.length}`}</p>
+      <p>{`${counter}/${pathsLength}`}</p>
       <input
         label={imgSrc.split('/')[1]}
         list="tickmarks"
-        max={paths.length - 1}
+        max={lastIndex}
         min="0"
         onChange={(e) => {
           const index = parseInt(e.target.value, 10);
@@ -39,7 +42,7 @@ function App() {
           <option key={paths[index]} value={index}></option>
         ))}
       </datalist>
-      <p>Last update: {getLastUpdate(paths)}</p>
+      <p>Last update: {getLastUpdate(lastPath)}</p>
       <h2>Notes</h2>
       <ul>
         <li>My journey started Sunday, January 16th, 2022</li>
@@ -65,7 +68,7 @@ function App() {
           </a>
         </li>
       </ul>
-      <footer>bell-s-palsy v0.4.2 - 2022</footer>
+      <footer>bell-s-palsy v{version} - 2022</footer>
     </div>
   );
 }
