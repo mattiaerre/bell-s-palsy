@@ -2,9 +2,9 @@
 
 exports[`scroll 1`] = `
 <input
-  label="2022_01_21.jpg"
+  label="2022_01_22.jpg"
   list="tickmarks"
-  max="5"
+  max="2"
   min="0"
   type="range"
 />
