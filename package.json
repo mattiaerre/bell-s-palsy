@@ -21,6 +21,7 @@
     "eject": "react-scripts eject",
     "start": "react-scripts start",
     "test": "react-scripts test",
+    "test:all": "yarn test --watchAll=false --coverage",
     "predeploy": "npm run build",
     "prettier:fix": "prettier './{src,tools}/**/*.{css,js,json}' --write"
   },
