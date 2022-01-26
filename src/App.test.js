@@ -22,10 +22,10 @@ test("it renders Bell's palsy - Mattia's journey", () => {
   expect(heading).toBeInTheDocument();
 });
 
-test.skip('scroll', () => {
+test('scroll', () => {
   render(<App paths={mockPaths} version={mockVersion} />);
   const slider = screen.getByRole('slider');
   expect(slider).toMatchSnapshot();
-  fireEvent.change(slider, { taget: { value: 0 } });
-  expect(screen.getByText('1/6')).toBeInTheDocument();
+  fireEvent.change(slider, { target: { value: 0 } });
+  expect(screen.getByText('1/3')).toBeInTheDocument();
 });
