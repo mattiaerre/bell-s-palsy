@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App paths={paths} version="0.5.1" />
+    <App paths={paths} version="0.5.2" />
   </React.StrictMode>,
   document.getElementById('root')
 );
