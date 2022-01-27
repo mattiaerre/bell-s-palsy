@@ -25,9 +25,9 @@ exports[`snapshot 1`] = `
       alt="TODO"
       src="/images/2022_01_22.jpg"
     />
-    <p>
-      3/3
-    </p>
+    <h3>
+      Jan 22nd, 2022 - 3/3
+    </h3>
     <input
       label="2022_01_22.jpg"
       list="tickmarks"
@@ -49,7 +49,7 @@ exports[`snapshot 1`] = `
       />
     </datalist>
     <p>
-      Last update: Saturday, January 22nd 2022
+      Last update: Saturday, January 22nd, 2022
     </p>
     <h2>
       Notes
