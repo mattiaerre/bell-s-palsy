@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import paths from './files.json';
 import App from './App';
+import paths from './files.json';
+import './index.css';
+import Playground from './Playground';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App paths={paths} version="0.5.2" />
+    {Boolean(process.env.REACT_APP_PLAYGROUND) ? (
+      <Playground />
+    ) : (
+      <App paths={paths} version="0.6.0" />
+    )}
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -7,7 +7,7 @@ const mockPaths = [
   'images/2022_01_22.jpg'
 ];
 
-const mockVersion = '0.5.2';
+const mockVersion = '0.0.0';
 
 test('snapshot', () => {
   const { asFragment } = render(

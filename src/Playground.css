@@ -1,0 +1,16 @@
+.Number {
+  border: 1px solid darkgray;
+  border-radius: 4px;
+  font-size: 4rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  width: 52px;
+}
+
+.Playground {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem auto 0 auto;
+  max-width: 300px;
+}
