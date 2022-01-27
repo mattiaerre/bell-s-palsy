@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {Boolean(process.env.REACT_APP_PLAYGROUND) ? (
+    {process.env.REACT_APP_MAIN === 'Playground' ? (
       <Playground />
     ) : (
       <App paths={paths} version="0.7.0" />
