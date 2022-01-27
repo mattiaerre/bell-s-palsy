@@ -15,6 +15,11 @@ exports[`snapshot 1`] = `
   <div
     class="App"
   >
+    <button
+      class="Close"
+    >
+      ×
+    </button>
     <h1>
       Bell's palsy - Mattia's journey
     </h1>

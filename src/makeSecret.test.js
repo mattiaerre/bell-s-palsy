@@ -1,10 +1,10 @@
 import makeSecret from './makeSecret';
 
 test('happy path', () => {
-  const secret = makeSecret();
-  secret.add(1, 2);
-  secret.add(2, 3);
-  secret.add(3, 5);
-  secret.add(4, 5);
+  const secret = makeSecret('YOLO');
+  secret.add(1, 'Y');
+  secret.add(2, 'O');
+  secret.add(3, 'L');
+  secret.add(4, 'O');
   expect(secret.valid()).toBe(true);
 });

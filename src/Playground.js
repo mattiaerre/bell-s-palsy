@@ -1,11 +1,17 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import makeSecret from './makeSecret';
 import './Playground.css';
 
-const secret = makeSecret();
+function Playground({ callback }) {
+  const secret = makeSecret(process.env.REACT_APP_SECRET);
 
-function Playground() {
   const [valid, setValid] = useState(false);
+
+  useEffect(() => {
+    if (valid) {
+      callback('authorized');
+    }
+  }, [callback, valid]);
 
   return (
     <section className="Playground">
@@ -21,7 +27,6 @@ function Playground() {
           type="text"
         />
       ))}
-      {valid && <p>YATTA!</p>}
     </section>
   );
 }

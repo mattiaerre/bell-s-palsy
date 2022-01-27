@@ -1,18 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import paths from './files.json';
+import Container from './Container';
 import './index.css';
-import Playground from './Playground';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    {process.env.REACT_APP_MAIN === 'Playground' ? (
-      <Playground />
-    ) : (
-      <App paths={paths} version="0.7.0" />
-    )}
+    <Container />
   </React.StrictMode>,
   document.getElementById('root')
 );

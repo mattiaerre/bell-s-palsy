@@ -5,3 +5,11 @@
   max-width: 768px;
   text-align: center;
 }
+
+.Close {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 0;
+  font-size: 2rem;
+  width: 50px;
+}

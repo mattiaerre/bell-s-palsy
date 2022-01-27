@@ -1,11 +1,11 @@
-function makeSecret() {
+function makeSecret(secret) {
   const data = [];
 
   function add(index, value) {
     data[index] = value;
   }
   function valid() {
-    return data.join('') === '2355';
+    return data.join('') === secret;
   }
 
   return { add, valid };
