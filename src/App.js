@@ -4,7 +4,7 @@ import getDate from './dates/getDate';
 import getLastUpdate from './dates/getLastUpdate';
 import './App.css';
 
-function App({ paths, version }) {
+function App({ callback, paths, version }) {
   const pathsLength = paths.length;
   const lastIndex = pathsLength - 1;
   const lastPath = paths[lastIndex];
@@ -21,6 +21,9 @@ function App({ paths, version }) {
 
   return (
     <div className="App">
+      <button className="Close" onClick={() => callback('unauthorized')}>
+        &times;
+      </button>
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
       <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />

@@ -15,6 +15,11 @@ exports[`snapshot 1`] = `
   <div
     class="App"
   >
+    <button
+      class="Close"
+    >
+      ×
+    </button>
     <h1>
       Bell's palsy - Mattia's journey
     </h1>
@@ -87,7 +92,7 @@ exports[`snapshot 1`] = `
       </li>
     </ul>
     <footer>
-      bell-s-palsy v0.5.2 - 2022
+      bell-s-palsy v0.0.0 - 2022
     </footer>
   </div>
 </DocumentFragment>

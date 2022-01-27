@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Container from './Container';
 import './index.css';
-import paths from './files.json';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App paths={paths} version="0.6.0" />
+    <Container />
   </React.StrictMode>,
   document.getElementById('root')
 );
