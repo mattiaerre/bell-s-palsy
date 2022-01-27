@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import getAgo from './getAgo';
-import getLastUpdate from './getLastUpdate';
+import getAgo from './dates/getAgo';
+import getDate from './dates/getDate';
+import getLastUpdate from './dates/getLastUpdate';
 import './App.css';
 
 function App({ paths, version }) {
@@ -23,7 +24,7 @@ function App({ paths, version }) {
       <h1>Bell's palsy - Mattia's journey</h1>
       <h2>{getAgo(imgSrc)}</h2>
       <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
-      <p>{`${counter}/${pathsLength}`}</p>
+      <h3>{`${getDate(imgSrc)} - ${counter}/${pathsLength}`}</h3>
       <input
         label={imgSrc.split('/')[1]}
         list="tickmarks"
