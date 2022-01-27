@@ -1,15 +1,31 @@
 .Number {
-  border: 1px solid darkgray;
-  border-radius: 4px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid darkgray;
+  border-radius: 0;
   font-size: 4rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
-  width: 52px;
+  width: 3rem;
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 1rem;
+  }
 }
 
 .Playground {
+  display: -webkit-flex;
   display: flex;
+  -webkit-justify-content: space-around;
   justify-content: space-around;
   margin: 3rem auto 0 auto;
   max-width: 300px;

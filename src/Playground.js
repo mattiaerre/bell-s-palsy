@@ -15,13 +15,14 @@ function Playground({ callback }) {
 
   return (
     <section className="Playground">
-      {[1, 2, 3, 4].map((index) => (
+      {['b', 'e', 'l', 'l'].map((placeholder, index) => (
         <input
           className="Number"
           onChange={({ target: { value } }) => {
             secret.add(index, value);
             setValid(secret.valid());
           }}
+          placeholder={placeholder}
           key={index}
           maxLength="1"
           type="text"

@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import useLocalStorage from './hooks/useLocalStorage';
 import App from './App';
 import paths from './files.json';
@@ -10,14 +9,10 @@ function Container() {
     'unauthorized'
   );
 
-  useEffect(() => {
-    console.log(authorization);
-  }, [authorization]);
-
   if (authorization !== 'authorized') {
     return <Playground callback={setAuthorization} />;
   }
-  return <App callback={setAuthorization} paths={paths} version="0.7.0" />;
+  return <App callback={setAuthorization} paths={paths} version="0.7.5" />;
 }
 
 export default Container;
