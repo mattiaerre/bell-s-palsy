@@ -27,5 +27,5 @@ test('scroll', () => {
   const slider = screen.getByRole('slider');
   expect(slider).toMatchSnapshot();
   fireEvent.change(slider, { target: { value: 0 } });
-  expect(screen.getByText('1/3')).toBeInTheDocument();
+  expect(screen.getByText('Jan 20th, 2022 - 1/3')).toBeInTheDocument();
 });
