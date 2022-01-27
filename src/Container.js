@@ -12,7 +12,7 @@ function Container() {
   if (authorization !== 'authorized') {
     return <Playground callback={setAuthorization} />;
   }
-  return <App callback={setAuthorization} paths={paths} version="0.7.7" />;
+  return <App callback={setAuthorization} paths={paths} version="0.7.8" />;
 }
 
 export default Container;
