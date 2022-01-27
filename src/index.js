@@ -11,7 +11,7 @@ ReactDOM.render(
     {Boolean(process.env.REACT_APP_PLAYGROUND) ? (
       <Playground />
     ) : (
-      <App paths={paths} version="0.6.0" />
+      <App paths={paths} version="0.7.0" />
     )}
   </React.StrictMode>,
   document.getElementById('root')
