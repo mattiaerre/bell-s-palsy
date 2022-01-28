@@ -12,7 +12,7 @@ function Container() {
       callback={setAuthorization}
       isAuthorized={authorization === 'authorized'}
       paths={paths}
-      version="0.9.0"
+      version="0.9.1"
     />
   );
 }
