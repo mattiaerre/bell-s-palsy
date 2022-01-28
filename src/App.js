@@ -16,11 +16,11 @@ function App({ callback, isAuthorized, paths, version }) {
   const inputEl = useRef(null);
 
   useEffect(() => {
-    if (inputEl.current) {
+    if (isAuthorized) {
       const index = parseInt(lastIndex, 10);
       inputEl.current.value = index;
     }
-  }, [lastIndex]);
+  }, [isAuthorized, lastIndex]);
 
   return (
     <div className="App">
