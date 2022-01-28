@@ -23,74 +23,82 @@ exports[`snapshot 1`] = `
     <h1>
       Bell's palsy - Mattia's journey
     </h1>
-    <h2>
-      a day ago
-    </h2>
-    <img
-      alt="TODO"
-      src="/images/2022_01_22.jpg"
-    />
-    <h3>
-      Jan 22nd, 2022 - 3/3
-    </h3>
-    <input
-      label="2022_01_22.jpg"
-      list="tickmarks"
-      max="2"
-      min="0"
-      type="range"
-    />
-    <datalist
-      id="tickmarks"
-    >
-      <option
-        value="0"
+    <section>
+      <h2>
+        a day ago
+      </h2>
+      <img
+        alt="TODO"
+        src="/images/2022_01_22.jpg"
       />
-      <option
-        value="1"
+      <h3>
+        Jan 22nd, 2022 - 3/3
+      </h3>
+      <input
+        label="2022_01_22.jpg"
+        list="tickmarks"
+        max="2"
+        min="0"
+        type="range"
       />
-      <option
-        value="2"
-      />
-    </datalist>
-    <p>
-      Last update: Saturday, January 22nd, 2022
-    </p>
-    <h2>
-      Notes
-    </h2>
-    <ul>
-      <li>
-        My journey started Sunday, January 16th, 2022
-      </li>
-      <li>
-        I'm taking a pic a day around 2:00 pm EST
-      </li>
-      <li>
-        The picture shows my biggest smile
-      </li>
-      <li>
-        You can slide left to go back in time
-      </li>
-      <li>
-        <a
-          href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Bell's palsy
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Bell's Palsy Fact Sheet
-        </a>
-      </li>
-    </ul>
+      <datalist
+        id="tickmarks"
+      >
+        <option
+          value="0"
+        />
+        <option
+          value="1"
+        />
+        <option
+          value="2"
+        />
+      </datalist>
+      <p>
+        Last update: Saturday, January 22nd, 2022
+      </p>
+      <h2>
+        Notes
+      </h2>
+      <ul>
+        <li>
+          My journey started Sunday, January 16th, 2022
+        </li>
+        <li>
+          I'm taking a picture a day around 2:00 pm EST
+        </li>
+        <li>
+          The picture shows my biggest smile
+        </li>
+        <li>
+          You can slide left to go back in time
+        </li>
+        <li>
+          <a
+            href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's palsy
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's Palsy Fact Sheet
+          </a>
+        </li>
+        <li>
+          I'm taking corticosteroids since Sunday, January 16th, 2022
+        </li>
+        <li>
+          I'm doing acupuncture since Wednesday, January 19th, 2022. I've done four sessions so far
+        </li>
+      </ul>
+    </section>
     <footer>
       bell-s-palsy v0.0.0 - 2022
     </footer>

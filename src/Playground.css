@@ -27,6 +27,5 @@
 .Playground {
   display: flex;
   justify-content: space-around;
-  margin: 3rem auto 0 auto;
-  max-width: 300px;
+  margin: 3rem;
 }

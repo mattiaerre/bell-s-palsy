@@ -11,19 +11,38 @@ const mockVersion = '0.0.0';
 
 test('snapshot', () => {
   const { asFragment } = render(
-    <App paths={mockPaths} version={mockVersion} />
+    <App
+      callback={jest.fn()}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
   );
   expect(asFragment()).toMatchSnapshot();
 });
 
 test("it renders Bell's palsy - Mattia's journey", () => {
-  render(<App paths={mockPaths} version={mockVersion} />);
+  render(
+    <App
+      callback={jest.fn()}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
   const heading = screen.getByText("Bell's palsy - Mattia's journey");
   expect(heading).toBeInTheDocument();
 });
 
 test('scroll', () => {
-  render(<App paths={mockPaths} version={mockVersion} />);
+  render(
+    <App
+      callback={jest.fn()}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
   const slider = screen.getByRole('slider');
   expect(slider).toMatchSnapshot();
   fireEvent.change(slider, { target: { value: 0 } });
