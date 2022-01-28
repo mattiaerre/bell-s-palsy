@@ -105,3 +105,52 @@ exports[`snapshot 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`unauthorized 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <button
+      class="Close"
+      disabled=""
+    >
+      ×
+    </button>
+    <h1>
+      Bell's palsy - Mattia's journey
+    </h1>
+    <section
+      class="Playground"
+    >
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="b"
+        type="text"
+      />
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="e"
+        type="text"
+      />
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="l"
+        type="text"
+      />
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="l"
+        type="text"
+      />
+    </section>
+    <footer>
+      bell-s-palsy v0.0.0 - 2022
+    </footer>
+  </div>
+</DocumentFragment>
+`;

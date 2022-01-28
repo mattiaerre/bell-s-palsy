@@ -48,3 +48,30 @@ test('scroll', () => {
   fireEvent.change(slider, { target: { value: 0 } });
   expect(screen.getByText('Jan 20th, 2022 - 1/3')).toBeInTheDocument();
 });
+
+test('unauthorized', () => {
+  const { asFragment } = render(
+    <App
+      callback={jest.fn()}
+      isAuthorized={false}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
+
+test('close', () => {
+  const mockCallback = jest.fn();
+  render(
+    <App
+      callback={mockCallback}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
+  const close = screen.getByRole('button');
+  fireEvent.click(close);
+  expect(mockCallback).toBeCalledWith('unauthorized');
+});
