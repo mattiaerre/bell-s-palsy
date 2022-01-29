@@ -21,19 +21,6 @@ test('snapshot', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-test("it renders Bell's palsy - Mattia's journey", () => {
-  render(
-    <App
-      callback={jest.fn()}
-      isAuthorized={true}
-      paths={mockPaths}
-      version={mockVersion}
-    />
-  );
-  const heading = screen.getByText("Bell's palsy - Mattia's journey");
-  expect(heading).toBeInTheDocument();
-});
-
 test('scroll', () => {
   render(
     <App
