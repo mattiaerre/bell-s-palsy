@@ -11,6 +11,7 @@ function Container() {
     <App
       callback={setAuthorization}
       isAuthorized={authorization === 'authorized'}
+      password={process.env.REACT_APP_PASSWORD}
       paths={paths}
       version="0.9.1"
     />

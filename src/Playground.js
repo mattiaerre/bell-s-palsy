@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import makeSecret from './makeSecret';
+import makeChecker from './makeChecker';
 import './Playground.css';
 
-function Playground({ callback }) {
-  const secret = makeSecret(process.env.REACT_APP_SECRET);
+function Playground({ callback, password }) {
+  const checker = makeChecker(password);
 
   const [valid, setValid] = useState(false);
 
@@ -19,8 +19,8 @@ function Playground({ callback }) {
         <input
           className="Number"
           onChange={({ target: { value } }) => {
-            secret.add(index, value);
-            setValid(secret.valid());
+            checker.add(index, value);
+            setValid(checker.valid());
           }}
           placeholder={placeholder}
           key={index}

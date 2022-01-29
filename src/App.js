@@ -5,7 +5,7 @@ import getLastUpdate from './dates/getLastUpdate';
 import './App.css';
 import Playground from './Playground';
 
-function App({ callback, isAuthorized, paths, version }) {
+function App({ callback, isAuthorized, password, paths, version }) {
   const pathsLength = paths.length;
   const lastIndex = pathsLength - 1;
   const lastPath = paths[lastIndex];
@@ -88,7 +88,7 @@ function App({ callback, isAuthorized, paths, version }) {
           </ul>
         </section>
       ) : (
-        <Playground callback={callback} />
+        <Playground callback={callback} password={password} />
       )}
       <footer>bell-s-palsy v{version} - 2022</footer>
     </div>
