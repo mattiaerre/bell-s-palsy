@@ -11,21 +11,54 @@ const mockVersion = '0.0.0';
 
 test('snapshot', () => {
   const { asFragment } = render(
-    <App paths={mockPaths} version={mockVersion} />
+    <App
+      callback={jest.fn()}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
   );
   expect(asFragment()).toMatchSnapshot();
 });
 
-test("it renders Bell's palsy - Mattia's journey", () => {
-  render(<App paths={mockPaths} version={mockVersion} />);
-  const heading = screen.getByText("Bell's palsy - Mattia's journey");
-  expect(heading).toBeInTheDocument();
-});
-
 test('scroll', () => {
-  render(<App paths={mockPaths} version={mockVersion} />);
+  render(
+    <App
+      callback={jest.fn()}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
   const slider = screen.getByRole('slider');
   expect(slider).toMatchSnapshot();
   fireEvent.change(slider, { target: { value: 0 } });
   expect(screen.getByText('Jan 20th, 2022 - 1/3')).toBeInTheDocument();
+});
+
+test('unauthorized', () => {
+  const { asFragment } = render(
+    <App
+      callback={jest.fn()}
+      isAuthorized={false}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
+
+test('close', () => {
+  const mockCallback = jest.fn();
+  render(
+    <App
+      callback={mockCallback}
+      isAuthorized={true}
+      paths={mockPaths}
+      version={mockVersion}
+    />
+  );
+  const close = screen.getByRole('button');
+  fireEvent.click(close);
+  expect(mockCallback).toBeCalledWith('unauthorized');
 });

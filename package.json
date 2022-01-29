@@ -1,6 +1,6 @@
 {
   "name": "bell-s-palsy",
-  "version": "0.8.2",
+  "version": "0.9.5",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -49,6 +49,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
+      "!src/hooks/useLocalStorage.js",
       "!src/index.js",
       "!src/reportWebVitals.js"
     ]

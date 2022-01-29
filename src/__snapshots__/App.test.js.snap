@@ -23,74 +23,153 @@ exports[`snapshot 1`] = `
     <h1>
       Bell's palsy - Mattia's journey
     </h1>
-    <h2>
-      a day ago
-    </h2>
-    <img
-      alt="TODO"
-      src="/images/2022_01_22.jpg"
-    />
-    <h3>
-      Jan 22nd, 2022 - 3/3
-    </h3>
-    <input
-      label="2022_01_22.jpg"
-      list="tickmarks"
-      max="2"
-      min="0"
-      type="range"
-    />
-    <datalist
-      id="tickmarks"
+    <section>
+      <h2>
+        a day ago
+      </h2>
+      <img
+        alt="TODO"
+        src="/images/2022_01_22.jpg"
+      />
+      <h3>
+        Jan 22nd, 2022 - 3/3
+      </h3>
+      <input
+        label="2022_01_22.jpg"
+        list="tickmarks"
+        max="2"
+        min="0"
+        type="range"
+      />
+      <datalist
+        id="tickmarks"
+      >
+        <option
+          value="0"
+        />
+        <option
+          value="1"
+        />
+        <option
+          value="2"
+        />
+      </datalist>
+      <p>
+        Last update: Saturday, January 22nd, 2022
+      </p>
+      <h2>
+        Notes
+      </h2>
+      <ul>
+        <li>
+          My journey started Sunday, January 16th, 2022
+        </li>
+        <li>
+          I'm taking a picture a day around 2:00 pm EST
+        </li>
+        <li>
+          The picture shows my biggest smile
+        </li>
+        <li>
+          You can slide left to go back in time
+        </li>
+        <li>
+          <a
+            href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's palsy
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            Bell's Palsy Fact Sheet
+          </a>
+        </li>
+        <li>
+          I'm taking corticosteroids since Sunday, January 16th, 2022
+        </li>
+        <li>
+          I'm doing acupuncture since Wednesday, January 19th, 2022. I've done four sessions so far
+        </li>
+      </ul>
+      <h2>
+        Quote
+      </h2>
+      <figure>
+        <blockquote
+          cite="https://www.amazon.com/gp/product/1935209892/ref=as_li_qf_asin_il_tl"
+          class="Quote"
+        >
+          <p>
+            When you are a young person, you are like a young creek, and you meet many rocks, many obstacles and difficulties on your way. You hurry to get past these obstacles and get to the ocean.
+          </p>
+          <p>
+            But as the creek moves down through the fields, it becomes larges and calmer and it can enjoy the reflection of the sky. It's wonderful. You will arrive at the sea anyway so enjoy the journey. Enjoy the sunshine, the sunset, the moon, the birds, the trees, and the many beauties along the way. Taste every moment of your daily life.
+          </p>
+        </blockquote>
+        <figcaption>
+          —Thich Nhat Hanh, 
+          <cite>
+            Good Citizens: Creating Enlightened Society
+          </cite>
+        </figcaption>
+      </figure>
+    </section>
+    <footer>
+      bell-s-palsy v0.0.0 - 2022
+    </footer>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`unauthorized 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <button
+      class="Close"
+      disabled=""
     >
-      <option
-        value="0"
+      ×
+    </button>
+    <h1>
+      Bell's palsy - Mattia's journey
+    </h1>
+    <section
+      class="Playground"
+    >
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="b"
+        type="text"
       />
-      <option
-        value="1"
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="e"
+        type="text"
       />
-      <option
-        value="2"
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="l"
+        type="text"
       />
-    </datalist>
-    <p>
-      Last update: Saturday, January 22nd, 2022
-    </p>
-    <h2>
-      Notes
-    </h2>
-    <ul>
-      <li>
-        My journey started Sunday, January 16th, 2022
-      </li>
-      <li>
-        I'm taking a pic a day around 2:00 pm EST
-      </li>
-      <li>
-        The picture shows my biggest smile
-      </li>
-      <li>
-        You can slide left to go back in time
-      </li>
-      <li>
-        <a
-          href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Bell's palsy
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.ninds.nih.gov/Disorders/Patient-Caregiver-Education/Fact-Sheets/Bells-Palsy-Fact-Sheet"
-          rel="noreferrer noopener"
-          target="_blank"
-        >
-          Bell's Palsy Fact Sheet
-        </a>
-      </li>
-    </ul>
+      <input
+        class="Number"
+        maxlength="1"
+        placeholder="l"
+        type="text"
+      />
+    </section>
     <footer>
       bell-s-palsy v0.0.0 - 2022
     </footer>
