@@ -13,7 +13,7 @@ function Container() {
       isAuthorized={authorization === 'authorized'}
       password={process.env.REACT_APP_PASSWORD}
       paths={paths}
-      version="0.9.6"
+      version="0.9.7"
     />
   );
 }
