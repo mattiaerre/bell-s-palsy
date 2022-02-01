@@ -17,7 +17,7 @@ function Playground({ callback, password }) {
     <section className="Playground">
       {['b', 'e', 'l', 'l'].map((placeholder, index) => (
         <input
-          className="Number"
+          className="Symbol"
           onChange={({ target: { value } }) => {
             checker.add(index, value);
             setValid(checker.valid());

@@ -146,25 +146,25 @@ exports[`unauthorized 1`] = `
       class="Playground"
     >
       <input
-        class="Number"
+        class="Symbol"
         maxlength="1"
         placeholder="b"
         type="text"
       />
       <input
-        class="Number"
+        class="Symbol"
         maxlength="1"
         placeholder="e"
         type="text"
       />
       <input
-        class="Number"
+        class="Symbol"
         maxlength="1"
         placeholder="l"
         type="text"
       />
       <input
-        class="Number"
+        class="Symbol"
         maxlength="1"
         placeholder="l"
         type="text"
