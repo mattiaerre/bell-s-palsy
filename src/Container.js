@@ -1,4 +1,5 @@
 import useLocalStorage from './hooks/useLocalStorage';
+import sessions from './acupuncture.json';
 import App from './App';
 import paths from './files.json';
 function Container() {
@@ -13,6 +14,7 @@ function Container() {
       isAuthorized={authorization === 'authorized'}
       password={process.env.REACT_APP_PASSWORD}
       paths={paths}
+      sessions={sessions}
       version="0.9.7"
     />
   );

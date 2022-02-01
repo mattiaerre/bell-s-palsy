@@ -1,3 +1,4 @@
+import converter from 'number-to-words';
 import { useEffect, useRef, useState } from 'react';
 import getAgo from './dates/getAgo';
 import getDate from './dates/getDate';
@@ -5,7 +6,7 @@ import getLastUpdate from './dates/getLastUpdate';
 import './App.css';
 import Playground from './Playground';
 
-function App({ callback, isAuthorized, password, paths, version }) {
+function App({ callback, isAuthorized, password, paths, sessions, version }) {
   const pathsLength = paths.length;
   const lastIndex = pathsLength - 1;
   const lastPath = paths[lastIndex];
@@ -83,7 +84,7 @@ function App({ callback, isAuthorized, password, paths, version }) {
             <li>I'm taking corticosteroids since Sunday, January 16th, 2022</li>
             <li>
               I'm doing acupuncture since Wednesday, January 19th, 2022. I've
-              done four sessions so far
+              done {converter.toWords(sessions.length)} sessions so far
             </li>
           </ul>
           <h2>Quote</h2>

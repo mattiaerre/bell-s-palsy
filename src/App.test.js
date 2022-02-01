@@ -7,6 +7,8 @@ const mockPaths = [
   'images/2022_01_22.jpg'
 ];
 
+const mockSessions = ['2022-01-19', '2022-01-22', '2022-01-24', '2022-01-26'];
+
 const mockVersion = '0.0.0';
 
 test('snapshot', () => {
@@ -15,6 +17,7 @@ test('snapshot', () => {
       callback={jest.fn()}
       isAuthorized={true}
       paths={mockPaths}
+      sessions={mockSessions}
       version={mockVersion}
     />
   );
@@ -27,6 +30,7 @@ test('scroll', () => {
       callback={jest.fn()}
       isAuthorized={true}
       paths={mockPaths}
+      sessions={mockSessions}
       version={mockVersion}
     />
   );
@@ -42,6 +46,7 @@ test('unauthorized', () => {
       callback={jest.fn()}
       isAuthorized={false}
       paths={mockPaths}
+      sessions={mockSessions}
       version={mockVersion}
     />
   );
@@ -55,6 +60,7 @@ test('close', () => {
       callback={mockCallback}
       isAuthorized={true}
       paths={mockPaths}
+      sessions={mockSessions}
       version={mockVersion}
     />
   );
