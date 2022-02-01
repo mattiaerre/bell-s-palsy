@@ -1,4 +1,10 @@
-.Number {
+.Playground {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem;
+}
+
+.Symbol {
   background-color: transparent;
   border: 0;
   border-bottom: 2px solid darkgray;
@@ -11,21 +17,15 @@
 }
 
 @media (max-width: 900px) {
-  .Number {
+  .Symbol {
     font-size: 3rem;
     width: 3rem;
   }
 }
 
 @media (max-width: 400px) {
-  .Number {
+  .Symbol {
     font-size: 2rem;
     width: 2rem;
   }
-}
-
-.Playground {
-  display: flex;
-  justify-content: space-around;
-  margin: 3rem;
 }
