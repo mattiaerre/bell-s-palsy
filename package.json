@@ -1,6 +1,6 @@
 {
   "name": "bell-s-palsy",
-  "version": "0.9.9",
+  "version": "0.10.5",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",

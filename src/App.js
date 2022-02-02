@@ -1,5 +1,5 @@
 import converter from 'number-to-words';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import getAgo from './dates/getAgo';
 import getDate from './dates/getDate';
 import getLastUpdate from './dates/getLastUpdate';
@@ -9,19 +9,12 @@ import Playground from './Playground';
 function App({ callback, isAuthorized, password, paths, sessions, version }) {
   const pathsLength = paths.length;
   const lastIndex = pathsLength - 1;
-  const lastPath = paths[lastIndex];
 
-  const [counter, setCounter] = useState(parseInt(pathsLength, 10));
-  const [imgSrc, setImgSrc] = useState(lastPath);
+  const [currentIndex, setCurrentIndex] = useState(lastIndex);
 
-  const inputEl = useRef(null);
-
-  useEffect(() => {
-    if (isAuthorized) {
-      const index = parseInt(lastIndex, 10);
-      inputEl.current.value = index;
-    }
-  }, [isAuthorized, lastIndex]);
+  function handleOnClick({ target: { value } }) {
+    setCurrentIndex(parseInt(value, 10));
+  }
 
   return (
     <div className="App">
@@ -35,34 +28,40 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
       <h1>Bell's palsy - Mattia's journey</h1>
       {isAuthorized ? (
         <section>
-          <h2>{getAgo(imgSrc)}</h2>
-          <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
-          <h3>{`${getDate(imgSrc)} - ${counter}/${pathsLength}`}</h3>
-          <input
-            label={imgSrc.split('/')[1]}
-            list="tickmarks"
-            max={lastIndex}
-            min="0"
-            onChange={(e) => {
-              const index = parseInt(e.target.value, 10);
-              setCounter(index + 1);
-              setImgSrc(paths[index]);
-            }}
-            ref={inputEl}
-            type="range"
+          <h2>{getAgo(paths[currentIndex])}</h2>
+          <img
+            alt="TODO"
+            className="Image"
+            src={`${process.env.PUBLIC_URL}/${paths[currentIndex]}`}
           />
-          <datalist id="tickmarks">
-            {paths.map((_, index) => (
-              <option key={paths[index]} value={index}></option>
-            ))}
-          </datalist>
-          <p>Last update: {getLastUpdate(lastPath)}</p>
+          <h3>{`${getDate(paths[currentIndex])} - ${
+            currentIndex + 1
+          }/${pathsLength}`}</h3>
+          <p>
+            <button
+              className="Previous"
+              disabled={currentIndex === 0}
+              onClick={handleOnClick}
+              value={currentIndex - 1}
+            >
+              &lsaquo;
+            </button>
+            <button
+              className="Next"
+              disabled={currentIndex === lastIndex}
+              onClick={handleOnClick}
+              value={currentIndex + 1}
+            >
+              &rsaquo;
+            </button>
+          </p>
+          <p>Last update: {getLastUpdate(paths[lastIndex])}</p>
           <h2>Notes</h2>
           <ul>
             <li>My journey started Sunday, January 16th, 2022</li>
             <li>I'm taking a picture a day around 2:00 pm EST</li>
             <li>The picture shows my biggest smile</li>
-            <li>You can slide left to go back in time</li>
+            <li>You can click left to go back in time</li>
             <li>
               <a
                 href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
@@ -81,7 +80,10 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
                 Bell's Palsy Fact Sheet
               </a>
             </li>
-            <li>I'm taking corticosteroids since Sunday, January 16th, 2022</li>
+            <li>
+              I've been taking corticosteroids between Sunday, January 16th,
+              2022, and Tuesday, February 1st, 2022
+            </li>
             <li>
               I'm doing acupuncture since Wednesday, January 19th, 2022. I've
               done {converter.toWords(sessions.length)} sessions so far

@@ -24,7 +24,7 @@ test('snapshot', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-test('scroll', () => {
+test('previous and next', () => {
   render(
     <App
       callback={jest.fn()}
@@ -34,10 +34,12 @@ test('scroll', () => {
       version={mockVersion}
     />
   );
-  const slider = screen.getByRole('slider');
-  expect(slider).toMatchSnapshot();
-  fireEvent.change(slider, { target: { value: 0 } });
-  expect(screen.getByText('Jan 20th, 2022 - 1/3')).toBeInTheDocument();
+  const previous = screen.getAllByRole('button')[1];
+  fireEvent.click(previous);
+  expect(screen.getByText('Jan 21st, 2022 - 2/3')).toBeInTheDocument();
+  const next = screen.getAllByRole('button')[2];
+  fireEvent.click(next);
+  expect(screen.getByText('Jan 22nd, 2022 - 3/3')).toBeInTheDocument();
 });
 
 test('unauthorized', () => {
@@ -64,7 +66,7 @@ test('close', () => {
       version={mockVersion}
     />
   );
-  const close = screen.getByRole('button');
+  const close = screen.getAllByRole('button')[0];
   fireEvent.click(close);
   expect(mockCallback).toBeCalledWith('unauthorized');
 });

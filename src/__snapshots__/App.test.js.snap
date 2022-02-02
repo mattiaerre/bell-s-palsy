@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`scroll 1`] = `
-<input
-  label="2022_01_22.jpg"
-  list="tickmarks"
-  max="2"
-  min="0"
-  type="range"
-/>
-`;
-
 exports[`snapshot 1`] = `
 <DocumentFragment>
   <div
@@ -29,31 +19,27 @@ exports[`snapshot 1`] = `
       </h2>
       <img
         alt="TODO"
+        class="Image"
         src="/images/2022_01_22.jpg"
       />
       <h3>
         Jan 22nd, 2022 - 3/3
       </h3>
-      <input
-        label="2022_01_22.jpg"
-        list="tickmarks"
-        max="2"
-        min="0"
-        type="range"
-      />
-      <datalist
-        id="tickmarks"
-      >
-        <option
-          value="0"
-        />
-        <option
+      <p>
+        <button
+          class="Previous"
           value="1"
-        />
-        <option
-          value="2"
-        />
-      </datalist>
+        >
+          ‹
+        </button>
+        <button
+          class="Next"
+          disabled=""
+          value="3"
+        >
+          ›
+        </button>
+      </p>
       <p>
         Last update: Saturday, January 22nd, 2022
       </p>
@@ -71,7 +57,7 @@ exports[`snapshot 1`] = `
           The picture shows my biggest smile
         </li>
         <li>
-          You can slide left to go back in time
+          You can click left to go back in time
         </li>
         <li>
           <a
@@ -92,7 +78,7 @@ exports[`snapshot 1`] = `
           </a>
         </li>
         <li>
-          I'm taking corticosteroids since Sunday, January 16th, 2022
+          I've been taking corticosteroids between Sunday, January 16th, 2022, and Tuesday, February 1st, 2022
         </li>
         <li>
           I'm doing acupuncture since Wednesday, January 19th, 2022. I've done four sessions so far
