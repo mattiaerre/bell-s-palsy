@@ -49,26 +49,6 @@ exports[`snapshot 1`] = `
           ›
         </button>
       </p>
-      <input
-        label="2022_01_22.jpg"
-        list="tickmarks"
-        max="2"
-        min="0"
-        type="range"
-      />
-      <datalist
-        id="tickmarks"
-      >
-        <option
-          value="0"
-        />
-        <option
-          value="1"
-        />
-        <option
-          value="2"
-        />
-      </datalist>
       <p>
         Last update: Saturday, January 22nd, 2022
       </p>
@@ -86,7 +66,7 @@ exports[`snapshot 1`] = `
           The picture shows my biggest smile
         </li>
         <li>
-          You can click or slide left to go back in time
+          You can click left to go back in time
         </li>
         <li>
           <a

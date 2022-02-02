@@ -24,7 +24,7 @@ test('snapshot', () => {
   expect(asFragment()).toMatchSnapshot();
 });
 
-test('scroll', () => {
+test.skip('scroll', () => {
   render(
     <App
       callback={jest.fn()}

@@ -1,5 +1,5 @@
 import converter from 'number-to-words';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import getAgo from './dates/getAgo';
 import getDate from './dates/getDate';
 import getLastUpdate from './dates/getLastUpdate';
@@ -14,20 +14,10 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
   const [currentIndex, setCurrentIndex] = useState(lastIndex);
   const [imgSrc, setImgSrc] = useState(lastPath);
 
-  const inputEl = useRef(null);
-
-  useEffect(() => {
-    if (isAuthorized) {
-      const index = parseInt(lastIndex, 10);
-      inputEl.current.value = index;
-    }
-  }, [isAuthorized, lastIndex]);
-
   function setAll(value) {
     const index = parseInt(value, 10);
     setCurrentIndex(index);
     setImgSrc(paths[index]);
-    inputEl.current.value = index;
   }
 
   return (
@@ -67,29 +57,13 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
               &rsaquo;
             </button>
           </p>
-          <input
-            label={imgSrc.split('/')[1]}
-            list="tickmarks"
-            max={lastIndex}
-            min="0"
-            onChange={({ target: { value } }) => {
-              setAll(value);
-            }}
-            ref={inputEl}
-            type="range"
-          />
-          <datalist id="tickmarks">
-            {paths.map((_, index) => (
-              <option key={paths[index]} value={index}></option>
-            ))}
-          </datalist>
           <p>Last update: {getLastUpdate(lastPath)}</p>
           <h2>Notes</h2>
           <ul>
             <li>My journey started Sunday, January 16th, 2022</li>
             <li>I'm taking a picture a day around 2:00 pm EST</li>
             <li>The picture shows my biggest smile</li>
-            <li>You can click or slide left to go back in time</li>
+            <li>You can click left to go back in time</li>
             <li>
               <a
                 href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
