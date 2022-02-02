@@ -9,15 +9,12 @@ import Playground from './Playground';
 function App({ callback, isAuthorized, password, paths, sessions, version }) {
   const pathsLength = paths.length;
   const lastIndex = pathsLength - 1;
-  const lastPath = paths[lastIndex];
 
   const [currentIndex, setCurrentIndex] = useState(lastIndex);
-  const [imgSrc, setImgSrc] = useState(lastPath);
 
   function setAll(value) {
     const index = parseInt(value, 10);
     setCurrentIndex(index);
-    setImgSrc(paths[index]);
   }
 
   return (
@@ -32,13 +29,15 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
       <h1>Bell's palsy - Mattia's journey</h1>
       {isAuthorized ? (
         <section>
-          <h2>{getAgo(imgSrc)}</h2>
+          <h2>{getAgo(paths[currentIndex])}</h2>
           <img
             alt="TODO"
             className="Image"
-            src={`${process.env.PUBLIC_URL}/${imgSrc}`}
+            src={`${process.env.PUBLIC_URL}/${paths[currentIndex]}`}
           />
-          <h3>{`${getDate(imgSrc)} - ${currentIndex + 1}/${pathsLength}`}</h3>
+          <h3>{`${getDate(paths[currentIndex])} - ${
+            currentIndex + 1
+          }/${pathsLength}`}</h3>
           <p>
             <button
               className="Previous"
@@ -61,7 +60,7 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
               &rsaquo;
             </button>
           </p>
-          <p>Last update: {getLastUpdate(lastPath)}</p>
+          <p>Last update: {getLastUpdate(paths[lastIndex])}</p>
           <h2>Notes</h2>
           <ul>
             <li>My journey started Sunday, January 16th, 2022</li>
