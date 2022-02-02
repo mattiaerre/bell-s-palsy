@@ -11,7 +11,7 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
   const lastIndex = pathsLength - 1;
   const lastPath = paths[lastIndex];
 
-  const [counter, setCounter] = useState(parseInt(pathsLength, 10));
+  const [currentIndex, setCurrentIndex] = useState(lastIndex);
   const [imgSrc, setImgSrc] = useState(lastPath);
 
   const inputEl = useRef(null);
@@ -22,6 +22,13 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
       inputEl.current.value = index;
     }
   }, [isAuthorized, lastIndex]);
+
+  function setAll(value) {
+    const index = parseInt(value, 10);
+    setCurrentIndex(index);
+    setImgSrc(paths[index]);
+    inputEl.current.value = index;
+  }
 
   return (
     <div className="App">
@@ -37,16 +44,36 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
         <section>
           <h2>{getAgo(imgSrc)}</h2>
           <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
-          <h3>{`${getDate(imgSrc)} - ${counter}/${pathsLength}`}</h3>
+          <h3>{`${getDate(imgSrc)} - ${currentIndex + 1}/${pathsLength}`}</h3>
+          <p>
+            <button
+              className="Previous"
+              disabled={currentIndex === 0}
+              onClick={({ target: { value } }) => {
+                setAll(value);
+              }}
+              value={currentIndex - 1}
+            >
+              &lsaquo;
+            </button>
+            <button
+              className="Next"
+              disabled={currentIndex === lastIndex}
+              onClick={({ target: { value } }) => {
+                setAll(value);
+              }}
+              value={currentIndex + 1}
+            >
+              &rsaquo;
+            </button>
+          </p>
           <input
             label={imgSrc.split('/')[1]}
             list="tickmarks"
             max={lastIndex}
             min="0"
-            onChange={(e) => {
-              const index = parseInt(e.target.value, 10);
-              setCounter(index + 1);
-              setImgSrc(paths[index]);
+            onChange={({ target: { value } }) => {
+              setAll(value);
             }}
             ref={inputEl}
             type="range"
@@ -62,7 +89,7 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
             <li>My journey started Sunday, January 16th, 2022</li>
             <li>I'm taking a picture a day around 2:00 pm EST</li>
             <li>The picture shows my biggest smile</li>
-            <li>You can slide left to go back in time</li>
+            <li>You can click or slide left to go back in time</li>
             <li>
               <a
                 href="https://www.mayoclinic.org/diseases-conditions/bells-palsy/symptoms-causes/syc-20370028"
