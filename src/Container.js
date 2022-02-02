@@ -15,7 +15,7 @@ function Container() {
       password={process.env.REACT_APP_PASSWORD}
       paths={paths}
       sessions={sessions}
-      version="0.10.3"
+      version="0.10.4"
     />
   );
 }
