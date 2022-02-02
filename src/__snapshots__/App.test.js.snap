@@ -34,6 +34,21 @@ exports[`snapshot 1`] = `
       <h3>
         Jan 22nd, 2022 - 3/3
       </h3>
+      <p>
+        <button
+          class="Previous"
+          value="1"
+        >
+          ‹
+        </button>
+        <button
+          class="Next"
+          disabled=""
+          value="3"
+        >
+          ›
+        </button>
+      </p>
       <input
         label="2022_01_22.jpg"
         list="tickmarks"
@@ -71,7 +86,7 @@ exports[`snapshot 1`] = `
           The picture shows my biggest smile
         </li>
         <li>
-          You can slide left to go back in time
+          You can click or slide left to go back in time
         </li>
         <li>
           <a

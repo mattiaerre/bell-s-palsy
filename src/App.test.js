@@ -64,7 +64,7 @@ test('close', () => {
       version={mockVersion}
     />
   );
-  const close = screen.getByRole('button');
+  const close = screen.getAllByRole('button')[0];
   fireEvent.click(close);
   expect(mockCallback).toBeCalledWith('unauthorized');
 });
