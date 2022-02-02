@@ -12,9 +12,8 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
 
   const [currentIndex, setCurrentIndex] = useState(lastIndex);
 
-  function setAll(value) {
-    const index = parseInt(value, 10);
-    setCurrentIndex(index);
+  function handleOnClick({ target: { value } }) {
+    setCurrentIndex(parseInt(value, 10));
   }
 
   return (
@@ -42,9 +41,7 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
             <button
               className="Previous"
               disabled={currentIndex === 0}
-              onClick={({ target: { value } }) => {
-                setAll(value);
-              }}
+              onClick={handleOnClick}
               value={currentIndex - 1}
             >
               &lsaquo;
@@ -52,9 +49,7 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
             <button
               className="Next"
               disabled={currentIndex === lastIndex}
-              onClick={({ target: { value } }) => {
-                setAll(value);
-              }}
+              onClick={handleOnClick}
               value={currentIndex + 1}
             >
               &rsaquo;
