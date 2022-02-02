@@ -86,7 +86,10 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
                 Bell's Palsy Fact Sheet
               </a>
             </li>
-            <li>I'm taking corticosteroids since Sunday, January 16th, 2022</li>
+            <li>
+              I've been taking corticosteroids between Sunday, January 16th,
+              2022, and Tuesday, February 1st, 2022
+            </li>
             <li>
               I'm doing acupuncture since Wednesday, January 19th, 2022. I've
               done {converter.toWords(sessions.length)} sessions so far
