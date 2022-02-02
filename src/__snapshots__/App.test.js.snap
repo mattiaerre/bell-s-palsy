@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`scroll 1`] = `
-<input
-  label="2022_01_22.jpg"
-  list="tickmarks"
-  max="2"
-  min="0"
-  type="range"
-/>
-`;
-
 exports[`snapshot 1`] = `
 <DocumentFragment>
   <div

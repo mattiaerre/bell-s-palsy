@@ -1,5 +1,5 @@
 import converter from 'number-to-words';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import getAgo from './dates/getAgo';
 import getDate from './dates/getDate';
 import getLastUpdate from './dates/getLastUpdate';
