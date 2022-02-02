@@ -33,7 +33,11 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
       {isAuthorized ? (
         <section>
           <h2>{getAgo(imgSrc)}</h2>
-          <img alt="TODO" src={`${process.env.PUBLIC_URL}/${imgSrc}`} />
+          <img
+            alt="TODO"
+            className="Image"
+            src={`${process.env.PUBLIC_URL}/${imgSrc}`}
+          />
           <h3>{`${getDate(imgSrc)} - ${currentIndex + 1}/${pathsLength}`}</h3>
           <p>
             <button

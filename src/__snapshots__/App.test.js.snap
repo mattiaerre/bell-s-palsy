@@ -19,6 +19,7 @@ exports[`snapshot 1`] = `
       </h2>
       <img
         alt="TODO"
+        class="Image"
         src="/images/2022_01_22.jpg"
       />
       <h3>
