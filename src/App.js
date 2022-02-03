@@ -58,7 +58,10 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
           <p>Last update: {getLastUpdate(paths[lastIndex])}</p>
           <h2>Notes</h2>
           <ul>
-            <li>My journey started Sunday, January 16th, 2022</li>
+            <li>
+              My journey started {getAgo(paths[0])}, on Sunday, January 16th,
+              2022
+            </li>
             <li>I'm taking a picture a day around 2:00 pm EST</li>
             <li>The picture shows my biggest smile</li>
             <li>You can click left to go back in time</li>

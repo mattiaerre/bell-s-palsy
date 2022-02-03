@@ -28,6 +28,7 @@
 
 .Quote {
   background-color: lightgray;
+  border: 1px solid darkgray;
   border-radius: 4px;
   margin: 1rem;
   padding: 1rem;
