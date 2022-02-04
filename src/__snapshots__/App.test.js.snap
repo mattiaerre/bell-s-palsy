@@ -27,6 +27,12 @@ exports[`snapshot 1`] = `
       </h3>
       <p>
         <button
+          class="First"
+          value="0"
+        >
+          «
+        </button>
+        <button
           class="Previous"
           value="1"
         >
@@ -38,6 +44,13 @@ exports[`snapshot 1`] = `
           value="3"
         >
           ›
+        </button>
+        <button
+          class="Last"
+          disabled=""
+          value="2"
+        >
+          »
         </button>
       </p>
       <p>

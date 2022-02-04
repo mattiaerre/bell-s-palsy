@@ -18,12 +18,14 @@
   border-radius: 4px;
 }
 
+.First,
+.Last,
 .Next,
 .Previous {
   background-color: transparent;
   border: 0;
   font-size: 3rem;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 .Quote {
