@@ -4,6 +4,8 @@ body {
 }
 
 html {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 16px;
 }
 
@@ -19,11 +21,6 @@ html {
   }
 }
 
-html {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 img {
   border: 1px solid darkgray;
   margin: 0 auto 1rem auto;
@@ -36,11 +33,10 @@ input[type='range'] {
 }
 
 footer {
+  color: darkblue;
   font-size: 0.75rem;
-}
-
-footer {
   padding: 3rem 0;
+  text-align: center;
 }
 
 h1,

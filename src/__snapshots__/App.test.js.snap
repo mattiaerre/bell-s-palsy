@@ -94,7 +94,7 @@ exports[`snapshot 1`] = `
           I've been taking corticosteroids between Sunday, January 16th, 2022, and Tuesday, February 1st, 2022
         </li>
         <li>
-          I'm doing acupuncture since Wednesday, January 19th, 2022. I've done four sessions so far
+          I'm doing acupuncture since Wednesday, January 19th, 2022. I've done two sessions so far
         </li>
       </ul>
       <h2>
@@ -120,9 +120,6 @@ exports[`snapshot 1`] = `
         </figcaption>
       </figure>
     </section>
-    <footer>
-      bell-s-palsy v0.0.0 - 2022
-    </footer>
   </div>
 </DocumentFragment>
 `;
@@ -169,9 +166,6 @@ exports[`unauthorized 1`] = `
         type="text"
       />
     </section>
-    <footer>
-      bell-s-palsy v0.0.0 - 2022
-    </footer>
   </div>
 </DocumentFragment>
 `;

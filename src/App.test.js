@@ -7,9 +7,7 @@ const mockPaths = [
   'images/2022_01_22.jpg'
 ];
 
-const mockSessions = ['2022-01-19', '2022-01-22', '2022-01-24', '2022-01-26'];
-
-const mockVersion = '0.0.0';
+const mockSessions = ['2022-01-21', '2022-01-22'];
 
 test('snapshot', () => {
   const { asFragment } = render(
@@ -18,7 +16,6 @@ test('snapshot', () => {
       isAuthorized={true}
       paths={mockPaths}
       sessions={mockSessions}
-      version={mockVersion}
     />
   );
   expect(asFragment()).toMatchSnapshot();
@@ -31,7 +28,6 @@ test('first, last, previous, and next', () => {
       isAuthorized={true}
       paths={mockPaths}
       sessions={mockSessions}
-      version={mockVersion}
     />
   );
   const first = screen.getAllByRole('button')[1];
@@ -55,7 +51,6 @@ test('unauthorized', () => {
       isAuthorized={false}
       paths={mockPaths}
       sessions={mockSessions}
-      version={mockVersion}
     />
   );
   expect(asFragment()).toMatchSnapshot();
@@ -69,7 +64,6 @@ test('close', () => {
       isAuthorized={true}
       paths={mockPaths}
       sessions={mockSessions}
-      version={mockVersion}
     />
   );
   const close = screen.getAllByRole('button')[0];
