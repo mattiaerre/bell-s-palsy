@@ -39,6 +39,14 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
           }/${pathsLength}`}</h3>
           <p>
             <button
+              className="First"
+              disabled={currentIndex === 0}
+              onClick={handleOnClick}
+              value={0}
+            >
+              &laquo;
+            </button>
+            <button
               className="Previous"
               disabled={currentIndex === 0}
               onClick={handleOnClick}
@@ -53,6 +61,14 @@ function App({ callback, isAuthorized, password, paths, sessions, version }) {
               value={currentIndex + 1}
             >
               &rsaquo;
+            </button>
+            <button
+              className="Last"
+              disabled={currentIndex === lastIndex}
+              onClick={handleOnClick}
+              value={lastIndex}
+            >
+              &raquo;
             </button>
           </p>
           <p>Last update: {getLastUpdate(paths[lastIndex])}</p>
