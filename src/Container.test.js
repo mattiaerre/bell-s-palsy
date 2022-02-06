@@ -6,3 +6,9 @@ test("it renders Bell's palsy - Mattia's journey", () => {
   const heading = screen.getByText("Bell's palsy - Mattia's journey");
   expect(heading).toBeInTheDocument();
 });
+
+test('it renders the footer', () => {
+  render(<Container />);
+  const footer = screen.getByRole('contentinfo');
+  expect(footer).toBeInTheDocument();
+});
