@@ -21,17 +21,6 @@ html {
   }
 }
 
-img {
-  border: 1px solid darkgray;
-  margin: 0 auto 1rem auto;
-  width: 80%;
-}
-
-input[type='range'] {
-  margin: 0 auto 1rem auto;
-  width: 80%;
-}
-
 footer {
   color: darkblue;
   font-size: 0.75rem;
