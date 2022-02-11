@@ -12,7 +12,7 @@ Bell's palsy - Mattia's journey
 
 - Verify that the new pic is shown in the app by running `yarn start`
 
-- Create a new branch and deploy the new version of the app
+- Create a new branch and deploy the new version of the app by running `yarn deploy`
 
 ## Resources
 
