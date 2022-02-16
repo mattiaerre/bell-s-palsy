@@ -1,6 +1,6 @@
 {
   "name": "bell-s-palsy",
-  "version": "0.13.9",
+  "version": "0.13.10",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "test:all": "yarn test --watchAll=false --coverage",
-    "predeploy": "npm run build",
+    "predeploy": "yarn build",
     "prettier:fix": "prettier './{src,tools}/**/*.{css,js,json}' --write"
   },
   "eslintConfig": {
