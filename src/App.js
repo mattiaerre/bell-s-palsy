@@ -5,7 +5,7 @@ import getDate from './dates/getDate';
 import getLastUpdate from './dates/getLastUpdate';
 import './App.css';
 import Playground from './Playground';
-import Quote from './Quote';
+// import Quote from './Quote';
 
 function App({ callback, isAuthorized, password, paths, sessions }) {
   const pathsLength = paths.length;
