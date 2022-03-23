@@ -3,7 +3,7 @@ import sessions from './acupuncture.json';
 import App from './App';
 import paths from './files.json';
 
-const version = '0.13.41';
+const version = '0.13.42';
 
 function Container() {
   const [authorization, setAuthorization] = useLocalStorage(
