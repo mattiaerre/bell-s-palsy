@@ -16,6 +16,4 @@ Bell's palsy - Mattia's journey
 
 ## Resources
 
-- [`<input type="range">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
-
 - [GitHub Action for Yarn](https://github.com/marketplace/actions/github-action-for-yarn)
